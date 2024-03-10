@@ -22,9 +22,15 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 
 
 // ************ WRITE YOUR CODE FROM HERE ************
+
+const other = require('./routes/other.routes');
+const middleware = require('./middlewares/userLogs');
+
 // ************ Route System require and use() ************
-const mainRouter = require('./routes/main');
-app.use('/', mainRouter);
+app.use('/', other);
+//app.use('/admin', admin) //hacer dsp
+//app.use('/productos',products) //hacer dsp
+//app.use('/autenticacion',auth) //hacer dsp
 
 
 
