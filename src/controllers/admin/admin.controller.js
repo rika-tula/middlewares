@@ -1,8 +1,5 @@
-const { loadData } = require("../../data");
-
 module.exports = (req, res) => {
-  const json = loadData()
-  const user = req.query.json;
+  const user = req.query.user;
 
   res.send(`Hola Admin: ${user}`);
 }
