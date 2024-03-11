@@ -1,0 +1,18 @@
+[
+    {
+        "nombre":"Ada",
+        "role": "ADMIN"
+    },
+    {
+        "nombre":"Greta",
+        "role": "REGULAR"
+    },
+    {
+        "nombre":"Vim",
+        "role": "ADMIN"
+    },
+    {
+        "nombre":"Tim",
+        "role": "REGULAR"
+    }
+]
