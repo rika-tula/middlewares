@@ -27,10 +27,11 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 
 const other = require('./routes/other.routes');
 const middleware = require('./middlewares/userLogs');
+const admin = require('./routes/admin.routes')
 
 // ************ Route System require and use() ************
 app.use('/', other);
-app.use('/admin', admin)
+app.use('/', admin)
 //app.use('/productos',products) //hacer dsp
 //app.use('/autenticacion',auth) //hacer dsp
 
@@ -38,19 +39,19 @@ app.use('/admin', admin)
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
-app.use((req, res, next) => next(createError(404)));
+//app.use((req, res, next) => next(createError(404)));
 
-// ************ error handler ************
-app.use((err, req, res, next) => {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.path = req.path;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+//// ************ error handler ************
+//app.use((err, req, res, next) => {
+//  // set locals, only providing error in development
+//  res.locals.message = err.message;
+//  res.locals.path = req.path;
+//  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+//  // render the error page
+//  res.status(err.status || 500);
+//  res.render('error');
+//});
 
 // ************ exports app - dont'touch ************
 module.exports = app;

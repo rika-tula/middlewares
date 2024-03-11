@@ -1,6 +1,8 @@
-module.exports = (req, res) => {
-const user = req.query
+const { loadData } = require("../../data");
 
-  res.send(`Hola Admin: ${user}`)
-  }
-  
+module.exports = (req, res) => {
+  const json = loadData()
+  const user = req.query.json;
+
+  res.send(`Hola Admin: ${user}`);
+}

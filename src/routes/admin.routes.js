@@ -4,6 +4,6 @@ const router = express.Router();
 const { admin } = require("../controllers/admin");
 const checkAdmin = require("../middlewares/checkAdmin");
 
-router.get("/:id",checkAdmin, admin)
+router.get("/admin",checkAdmin, admin)
 
 module.exports = router

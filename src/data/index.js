@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
     loadData: (filenameJSON = 'users') => {
-        const pathJSON = path.join(__dirname, `./${filenameJSON}.json`);
-        const dataJSON = fs.readFileSync(pathJSON, 'utf-8');
-        const dataJS = JSON.parse(dataJSON);
-        return dataJS;
+        const pathJSON = path.join(__dirname, `./${filenameJSON}.json`)
+        const dataJSON = fs.readFileSync(pathJSON, 'utf-8')
+        const dataJS = JSON.parse(dataJSON)
+        return dataJS
     }
 };

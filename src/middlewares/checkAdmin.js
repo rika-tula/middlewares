@@ -1,13 +1,12 @@
-const { loadData } = require("../data")
-
+const { loadData } = require("../data");
 
 module.exports = (req, res, next) => {
-    const users = loadData()
-    const user = users[0]
+    const base = loadData()
+    const user = req.query.base
 
     if (user.role === 'ADMIN') {
-        return next().redirect('/admin')
+        return next()
     }
+    res.status(403).send('No tienes los privilegios para ingresar')
     
-    return res.redirect('/')
 }

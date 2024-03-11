@@ -1,18 +1,18 @@
 [
     {
-        "nombre":"Ada",
+        "user":"Ada",
         "role": "ADMIN"
     },
     {
-        "nombre":"Greta",
+        "user":"Greta",
         "role": "REGULAR"
     },
     {
-        "nombre":"Vim",
+        "user":"Vim",
         "role": "ADMIN"
     },
     {
-        "nombre":"Tim",
+        "user":"Tim",
         "role": "REGULAR"
     }
 ]
